@@ -1,0 +1,10 @@
+pip install django djangorestframework-simplejwt django-cors-headers drf-nested-routers
+pip freeze > requirements.txt
+
+django-admin startproject config .
+python manage.py startapp users
+python manage.py startapp exercises
+python manage.py startapp workout
+
+Проверка промежуточного кода (полезно делать после выполнения настроек в settings)
+python manage.py check
