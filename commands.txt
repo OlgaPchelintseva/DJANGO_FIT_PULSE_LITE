@@ -8,3 +8,14 @@ python manage.py startapp workout
 
 Проверка промежуточного кода (полезно делать после выполнения настроек в settings)
 python manage.py check
+
+Заполнение данных из txt через миграцию
+python manage.py makemigrations exercises --empty -n seed_initial_data
+python manage.py migrate exercises
+
+python manage.py createsuperuser
+python manage.py runserver
+
+npm create vite@latest . -- --template react
+npm install
+npm install axios react-router-dom

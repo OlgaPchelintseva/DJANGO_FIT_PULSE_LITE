@@ -33,7 +33,7 @@ class TemplateExerciseCreateSerializer(serializers.ModelSerializer):
             max_order = TemplateExercise.objects.filter(template=template).count()
             validated_data['order'] = max_order + 1
         return super().create(validated_data)
-    
+
 class WorkoutSetSerializer(serializers.ModelSerializer):
     exercise_name = serializers.CharField(source='exercise.name', read_only=True)
     estimated_1rm = serializers.DecimalField(max_digits=6, decimal_places=2, read_only=True)
